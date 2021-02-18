@@ -1,4 +1,4 @@
-# training
+# wuetraining
 
 > Nuxt.js project
 
@@ -19,8 +19,5 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and Tooltwist docs:.
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
-[nuxt-starter-template](https://github.com/tooltwist/nuxt-starter-template)
-[Authservice](https://github.com/tooltwist/vue-authservice)
-[Contentservice](https://github.com/tooltwist/vue-contentservice)

@@ -1,12 +1,9 @@
-const nodeExternals = require('webpack-node-externals')
-const webpack = require('webpack')
-
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'training',
+    title: 'wuetraining',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +20,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules :[
+    ['nuxt-buefy'],
+    '@nuxtjs/font-awesome',
+  ],  
+  buefy: { defaultIconPack: 'fas' }
+
   build: {
     /*
     ** Run ESLint on save
@@ -36,43 +39,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
-    plugins: [
-      /*
-      *  These are the Webpack plugins (not to be mistaken for Nuxt plugins)
-      *  https://nuxtjs.org/faq/webpack-plugins/
-      */
-      // https://nuxtjs.org/faq/webpack-plugins/
-      // https://github.com/nuxt/nuxt.js/issues/843
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
-      })
-    ]
-
-  },
-  plugins: [
-    /*
-     *  These are our Nuxt plugins, defined in the /plugins directory.
-     */
-    { src: '~plugins/vue-awesome.js', ssr: true },
-    { src: '~plugins/vue-authservice.js', ssr: false },
-    { src: '~plugins/vue-contentservice.js', ssr: false },
-    { src: '~/plugins/nuxt-drag-drop.js', ssr: true },
-    { src: '~/plugins/nuxt-froala.js', ssr: false },
-    { src: '~/plugins/nuxt-vue-split-panel.js', ssr: false },
-    { src: '~plugins/vue-hotkey.js', ssr: false },
-  ],
-  modules: [
-    ['nuxt-buefy'],
-    '@nuxtjs/font-awesome',
-  ],
-  buefy: { defaultIconPack: 'fas' },
-  css: [
-    { src: '@/assets/scss/main.scss', lang: 'sass' }
-  ],
-  router: {
-    middleware: 'only-if-logged-in'
+    }
   }
 }
+

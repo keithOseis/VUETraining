@@ -1,25 +1,8 @@
-<template lang="pug">
-  div
-    .above-my-footer
-      public-header
-      nuxt
-
-    public-footer.my-footer
+<template>
+  <div>
+    <nuxt/>
+  </div>
 </template>
-
-<script>
-  import PublicHeader from '@/components/PublicHeader.vue'
-  import PublicFooter from '@/components/PublicFooter.vue'
-
-  export default {
-    name: 'settings',
-    components: {
-      PublicHeader,
-      PublicFooter
-    },
-  }
-</script>
-
 
 <style>
 html {
@@ -37,4 +20,34 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+.button--green {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3b8070;
+  color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--green:hover {
+  color: #fff;
+  background-color: #3b8070;
+}
+
+.button--grey {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #35495e;
+  color: #35495e;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #fff;
+  background-color: #35495e;
+}
 </style>
+
