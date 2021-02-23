@@ -1,37 +1,44 @@
 <template>
   <div>
-     <topbar/>
-     <section class="hero is-primary has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            Tech Blog
-          </h1>
-          <h2 class="subtitle">
-            An awesome tech blog
-          </h2>
-        </div>
-      </div>
-    </section>
+    <topbar />
+    <v-form v-model="valid">
+    <v-container>
+    <v-card class="mx-auto" max-width="360" min-width="360" outlined>
+      <v-list-item> 
+        <v-btn
+          v-for="(item, index) in menu"
+          :key="index"
+          tile
+          dense
+          color=item.color
+        >
+        <v-icon left>
+          {{ item.icon }}
+        </v-icon>
+          {{ item.title }}
+        </v-btn>
+      </v-list-item>
+      <v-list-item color="lightgrey"> test </v-list-item>
+      <v-list-item three-line>
+        <v-list-item-content>
+          <div class="overline mb-4">OVERLINE</div>
+          <v-list-item-title class="headline mb-1">
+            Headline 5
+          </v-list-item-title>
+          <v-list-item-subtitle
+            >Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle
+          >
+        </v-list-item-content>
 
-    <section class="section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-three-fifths is-offset-one-fifth">
-            <div v-for="post in posts" :key="post.slug" class="mb-5">
-              <h3 class="title is-4">
-                <nuxt-link :to="post.slug">
-                  {{ post.title }}
-                </nuxt-link>
-              </h3>
-              <div>
-                {{ post.description }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
+      </v-list-item>
+
+      <v-card-actions>
+        <v-btn outlined rounded text> Button </v-btn>
+      </v-card-actions>
+    </v-card>
+    </v-container>
+    </v-form>
   </div>
 </template>
 
@@ -39,26 +46,22 @@
 import Topbar from "~/components/topbar.vue";
 
 export default {
-
-  async asyncData ({ $content }) {
-    const posts = await $content('posts').sortBy('createdAt', 'desc').fetch()
-    return { posts }
+  data() {
+    return {
+      menu: [{ title: "save", icon: "mdi-floppy", color: "success" }, { title: "cancel" , icon: "mdi-delete", color: "success" }, { title: "close" , icon: "mdi-stop", color: "success"}],
+    };
   },
-
- components: {
-  'topbar': Topbar
- }
-}
+  components: {
+    topbar: Topbar,
+  },
+  methods: {
+   reset () {
+     this.$refs.form.resetValidation()
+   }
+  },
+};
 
 </script>
 
 <style>
-  h3 a {
-    color: #363636;
-  }
-  h3 a:hover {
-    color: #3273dc;
-  }
-
-
 </style>
