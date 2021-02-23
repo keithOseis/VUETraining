@@ -19,12 +19,7 @@
     "url": "https://github.com/keithOseis/VUETraining/issues"
   },
   "dependencies":{
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios":"*",
-    "stylus":"*",
-    "stylus-loader":"*",
-    "@nuxt/content":"*",
-    "@nuxtjs/vuetify:"*"
+    "nuxt": "^2.0.0"
   },
   "homepage": "https://github.com/keithOseis/VUETraining#readme"
 }
