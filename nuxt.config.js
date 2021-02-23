@@ -15,12 +15,12 @@ module.exports = {
     ]
   },
   css: [
-    '~assests/style/app.styl',
-    '~assests/style/app.css'
   ],
 
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxt/content',
+    '@nuxtjs/vuetify'
     
   ],
   axios: {
@@ -37,5 +37,3 @@ module.exports = {
   }
 
 }
-
-
