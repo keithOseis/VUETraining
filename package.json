@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-       "dev":"nuxt",
-       "build":"nuxt build",
-       "generate": "nuxt generate",
-       "start": "nuxt start"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,13 @@
   "bugs": {
     "url": "https://github.com/keithOseis/VUETraining/issues"
   },
-  "dependencies":{
-    "nuxt": "^2.0.0"
+  "dependencies": {
+    "@nuxt/content": "1.13.1",
+    "@nuxtjs/axios": "5.13.1",
+    "@nuxtjs/vuetify": "1.11.3",
+    "nuxt": "^2.0.0",
+    "stylus": "0.54.8",
+    "stylus-loader": "5.0.0"
   },
   "homepage": "https://github.com/keithOseis/VUETraining#readme"
 }
