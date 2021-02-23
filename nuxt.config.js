@@ -15,13 +15,14 @@ module.exports = {
     ]
   },
   css: [
-    '~assests/style/app.styl'
+    '~assests/style/app.styl',
+    '~assests/style/app.css'
   ],
 
   modules: [
-    '@nuxtjs/axios',
-    'nuxt-buefy',
-  ]
+    '@nuxtjs/axios'
+    
+  ],
   axios: {
     //proxyHeaders: false
   },
