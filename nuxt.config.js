@@ -1,13 +1,15 @@
-module.exports = {
+import pkg from './package.json'
+
+export default {
   /*
    ** Headers of the page
    */
   head: {
-    title: "training",
+    title: pkg.name,
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Nuxt.js project" }
+      { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -16,6 +18,7 @@ module.exports = {
   modules: ["@nuxtjs/axios", "@nuxt/content", "@nuxtjs/vuetify"],
   axios: {
     //proxyHeaders: false
+    baseURL: 'htpp://vmstation.gfgm.de'
   },
   /*
    ** Customize the progress bar color
